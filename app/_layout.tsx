@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import {SplashScreen, Stack} from "expo-router";
 import {useFonts} from "expo-font";
 import '../global.css';
+import GlobalProvider from "@/context/GlobalProvider";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -34,9 +35,13 @@ const RootLayout = () => {
         return null;
     }
     return (
-        <Stack>
-            <Stack.Screen name="index" options={{ headerShown: false }} />
-        </Stack>
+        <GlobalProvider>
+            <Stack initialRouteName="login">
+                {/*<Stack.Screen name="index" options={{ headerShown: false }} />*/}
+                <Stack.Screen name="login" options={{ headerShown: false }}></Stack.Screen>
+                <Stack.Screen name="verify" options={{ headerShown: false }}></Stack.Screen>
+            </Stack>
+        </GlobalProvider>
     );
 };
 
