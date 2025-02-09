@@ -29,7 +29,7 @@ const VerifyScreen = () => {
                 setSessionId(data.session_id);
                 setIsLogged(true);
                 Alert.alert('Success', 'OTP was verified successfully.');
-                router.replace('/home');
+                router.push('/my-files');
             } else {
                 Alert.alert('Error', 'Invalid OTP. Try again.');
             }

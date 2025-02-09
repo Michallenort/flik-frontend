@@ -38,7 +38,7 @@ export default function LoginScreen() {
 
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>Logowanie OTP</Text>
+            <Text style={styles.title}>OTP Authentication</Text>
             <TextInput
                 style={styles.input}
                 placeholder="Enter your phone number"
